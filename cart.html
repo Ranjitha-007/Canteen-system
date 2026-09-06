@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart | Campus Canteen</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar cart-navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                Campus Canteen
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="menu.html">Menu</a>
+
+                <a href="orders.html">My Orders</a>
+
+                <a href="complaints.html">Complaints</a>
+
+                <a href="cart.html" class="cart-link active">
+
+                    <svg width="20"
+                         height="20"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2">
+
+                        <circle cx="9" cy="20" r="1"></circle>
+                        <circle cx="19" cy="20" r="1"></circle>
+
+                        <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6">
+                        </path>
+
+                    </svg>
+
+                    Cart
+
+                    <span id="cartCount">0</span>
+
+                </a>
+
+            </div>
+
+            <a href="login.html" class="nav-login">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- CART HEADER -->
+
+    <section class="cart-header">
+
+        <div class="cart-container">
+
+            <p class="section-label">
+                YOUR ORDER
+            </p>
+
+            <h1>
+                Your Cart
+            </h1>
+
+            <p>
+                Review your items before proceeding to checkout.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CART CONTENT -->
+
+    <main class="cart-section">
+
+        <div class="cart-container">
+
+            <div class="cart-layout">
+
+
+                <!-- CART ITEMS -->
+
+                <div class="cart-items-section">
+
+                    <div class="cart-section-heading">
+
+                        <h2>
+                            Cart Items
+                        </h2>
+
+                        <a href="menu.html">
+                            Continue Shopping
+                        </a>
+
+                    </div>
+
+
+                    <div id="cartItems">
+                        <!-- Items will be inserted by ordering.js -->
+                    </div>
+
+                </div>
+
+
+                <!-- ORDER SUMMARY -->
+
+                <aside class="order-summary">
+
+                    <h2>
+                        Order Summary
+                    </h2>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="cartTotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Cover Charge
+                        </span>
+
+                        <strong>
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="finalTotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        class="checkout-btn"
+                        onclick="goToCheckout()">
+
+                        Proceed to Checkout
+
+                    </button>
+
+
+                    <p class="checkout-note">
+                        You can choose your pickup time
+                        during checkout.
+                    </p>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Campus Canteen. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="auth.js"></script>
+    <script src="ordering.js"></script>
+
+</body>
+
+</html>
