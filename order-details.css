@@ -1,0 +1,431 @@
+/* =========================================
+   ORDER DETAILS PAGE
+   ========================================= */
+
+.order-details-navbar {
+    width: 100%;
+}
+
+.order-details-navbar .nav-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.order-details-navbar .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+    flex: 1;
+}
+
+.order-details-navbar .nav-login {
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.order-details-container {
+    width: 92%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 45px 0 70px;
+}
+
+
+/* =========================================
+   SUCCESS HEADER
+   ========================================= */
+
+.order-success {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.success-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+    color: #15803d;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.order-success h1 {
+    margin: 0 0 8px;
+
+    font-size: 30px;
+}
+
+.order-success p {
+    margin: 0;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   ORDER CARD
+   ========================================= */
+
+.details-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+}
+
+.details-card h2 {
+    margin: 0 0 20px;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   ORDER ID
+   ========================================= */
+
+.order-id-box {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 16px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+.order-id-label {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+.order-id-value {
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   STATUS
+   ========================================= */
+
+.details-status {
+    display: inline-flex;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INFORMATION GRID
+   ========================================= */
+
+.details-info {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin-top: 20px;
+}
+
+.detail-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.detail-label {
+    font-size: 12px;
+
+    color: #6b7280;
+}
+
+.detail-value {
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ITEMS
+   ========================================= */
+
+.detail-items {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.detail-item-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.detail-item-row:last-child {
+    border-bottom: none;
+}
+
+.detail-item-name {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.detail-item-name strong {
+    font-size: 14px;
+}
+
+.detail-item-quantity {
+    font-size: 13px;
+
+    color: #6b7280;
+}
+
+.detail-item-price {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TOTAL
+   ========================================= */
+
+.total-section {
+    margin-top: 20px;
+
+    border-top: 1px solid #e5e7eb;
+
+    padding-top: 18px;
+}
+
+.total-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 7px 0;
+
+    font-size: 14px;
+}
+
+.total-final {
+    margin-top: 8px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #e5e7eb;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+   ========================================= */
+
+.order-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.order-action-btn {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.primary-action {
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+.primary-action:hover {
+    background: #1d4ed8;
+}
+
+.secondary-action {
+    background: #ffffff;
+
+    color: #2563eb;
+
+    border: 1px solid #2563eb;
+}
+
+.secondary-action:hover {
+    background: #eff6ff;
+}
+
+
+/* =========================================
+   ORDER NOT FOUND
+   ========================================= */
+
+.order-not-found {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 60px 25px;
+
+    text-align: center;
+}
+
+.order-not-found h2 {
+    margin: 0 0 8px;
+}
+
+.order-not-found p {
+    margin: 0 0 22px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .order-details-navbar .nav-container {
+        gap: 15px;
+    }
+
+    .order-details-navbar .nav-links {
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .order-details-navbar .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .order-details-navbar .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+    }
+
+    .order-details-container {
+        width: 94%;
+
+        padding-top: 30px;
+    }
+
+    .details-info {
+        grid-template-columns: 1fr;
+    }
+
+    .order-id-box {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .order-actions {
+        flex-direction: column;
+    }
+}

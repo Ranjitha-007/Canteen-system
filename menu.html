@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu | Campus Canteen</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar menu-navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                Campus Canteen
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="menu.html" class="active">
+                    Menu
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+                <a href="complaints.html">
+                    Complaints
+                </a>
+
+                <a href="cart.html" class="cart-link">
+                    <svg width="20"
+                         height="20"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2">
+                        <circle cx="9" cy="20" r="1"></circle>
+                        <circle cx="19" cy="20" r="1"></circle>
+                        <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"></path>
+                    </svg>
+
+                    Cart
+                    <span id="cartCount">0</span>
+                </a>
+
+            </div>
+
+            <a href="login.html" class="nav-login">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MENU HEADER ================= -->
+
+    <section class="menu-header">
+
+        <div class="container">
+
+            <p class="section-label">
+                CAMPUS MENU
+            </p>
+
+            <h1>
+                What would you like to eat?
+            </h1>
+
+            <p>
+                Choose your favourite food and pre-order it
+                before reaching the canteen.
+            </p>
+
+
+            <!-- SEARCH -->
+
+            <div class="menu-search">
+
+                <svg width="20"
+                     height="20"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <circle cx="11" cy="11" r="7"></circle>
+
+                    <path d="m20 20-4-4"></path>
+
+                </svg>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search food..."
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CATEGORY FILTER ================= -->
+
+    <section class="menu-section">
+
+        <div class="container">
+
+            <div class="category-filter">
+
+                <button
+                    class="category-btn active"
+                    data-category="all">
+
+                    All
+
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="breakfast">
+
+                    Breakfast
+
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="meals">
+
+                    Meals
+
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="snacks">
+
+                    Snacks
+
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="drinks">
+
+                    Drinks
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= FOOD GRID ================= -->
+
+            <div class="food-grid" id="foodGrid">
+
+
+                <!-- FOOD 1 -->
+
+                <div
+                    class="menu-food-card"
+                    data-category="breakfast"
+                    data-name="Masala Dosa">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=700&q=80"
+                        alt="Masala Dosa"
+                    >
+
+                    <div class="food-card-content">
+
+                        <span class="food-category">
+                            Breakfast
+                        </span>
+
+                        <h3>
+                            Masala Dosa
+                        </h3>
+
+                        <p>
+                            Crispy dosa served with potato masala,
+                            sambar and chutney.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹40
+                            </strong>
+
+                            <button
+                                class="add-cart-btn"
+                                onclick="addToCart(1)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FOOD 2 -->
+
+                <div
+                    class="menu-food-card"
+                    data-category="breakfast"
+                    data-name="Idli">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80"
+                        alt="Idli"
+                    >
+
+                    <div class="food-card-content">
+
+                        <span class="food-category">
+                            Breakfast
+                        </span>
+
+                        <h3>
+                            Idli
+                        </h3>
+
+                        <p>
+                            Soft steamed idlis served with
+                            sambar and chutney.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹25
+                            </strong>
+
+                            <button
+                                class="add-cart-btn"
+                                onclick="addToCart(2)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FOOD 3 -->
+
+                <div
+                    class="menu-food-card"
+                    data-category="meals"
+                    data-name="South Indian Meals">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80"
+                        alt="South Indian Meals"
+                    >
+
+                    <div class="food-card-content">
+
+                        <span class="food-category">
+                            Meals
+                        </span>
+
+                        <h3>
+                            South Indian Meals
+                        </h3>
+
+                        <p>
+                            Complete vegetarian meal with rice,
+                            curry, vegetables and sides.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹70
+                            </strong>
+
+                            <button
+                                class="add-cart-btn"
+                                onclick="addToCart(3)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FOOD 4 -->
+
+                <div
+                    class="menu-food-card"
+                    data-category="meals"
+                    data-name="Veg Fried Rice">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=700&q=80"
+                        alt="Veg Fried Rice"
+                    >
+
+                    <div class="food-card-content">
+
+                        <span class="food-category">
+                            Meals
+                        </span>
+
+                        <h3>
+                            Veg Fried Rice
+                        </h3>
+
+                        <p>
+                            Fried rice prepared with fresh vegetables
+                            and aromatic spices.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹60
+                            </strong>
+
+                            <button
+                                class="add-cart-btn"
+                                onclick="addToCart(4)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FOOD 5 -->
+
+                <div
+                    class="menu-food-card"
+                    data-category="snacks"
+                    data-name="Samosa">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=700&q=80"
+                        alt="Samosa"
+                    >
+
+                    <div class="food-card-content">
+
+                        <span class="food-category">
+                            Snacks
+                        </span>
+
+                        <h3>
+                            Samosa
+                        </h3>
+
+                        <p>
+                            Crispy pastry filled with spiced
+                            potato and peas.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹15
+                            </strong>
+
+                            <button
+                                class="add-cart-btn"
+                                onclick="addToCart(5)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FOOD 6 -->
+
+                <div
+                    class="menu-food-card"
+                    data-category="snacks"
+                    data-name="Veg Sandwich">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"
+                        alt="Veg Sandwich"
+                    >
+
+                    <div class="food-card-content">
+
+                        <span class="food-category">
+                            Snacks
+                        </span>
+
+                        <h3>
+                            Veg Sandwich
+                        </h3>
+
+                        <p>
+                            Fresh vegetables layered between
+                            toasted bread.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹45
+                            </strong>
+
+                            <button
+                                class="add-cart-btn"
+                                onclick="addToCart(6)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FOOD 7 -->
+
+                <div
+                    class="menu-food-card"
+                    data-category="drinks"
+                    data-name="Fresh Lime Juice">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80"
+                        alt="Fresh Lime Juice"
+                    >
+
+                    <div class="food-card-content">
+
+                        <span class="food-category">
+                            Drinks
+                        </span>
+
+                        <h3>
+                            Fresh Lime Juice
+                        </h3>
+
+                        <p>
+                            Refreshing lime drink served chilled.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹25
+                            </strong>
+
+                            <button
+                                class="add-cart-btn"
+                                onclick="addToCart(7)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FOOD 8 -->
+
+                <div
+                    class="menu-food-card"
+                    data-category="drinks"
+                    data-name="Cold Coffee">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80"
+                        alt="Cold Coffee"
+                    >
+
+                    <div class="food-card-content">
+
+                        <span class="food-category">
+                            Drinks
+                        </span>
+
+                        <h3>
+                            Cold Coffee
+                        </h3>
+
+                        <p>
+                            Chilled creamy coffee drink.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>
+                                ₹50
+                            </strong>
+
+                            <button
+                                class="add-cart-btn"
+                                onclick="addToCart(8)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NO RESULTS -->
+
+            <div
+                id="noResults"
+                class="no-results"
+                style="display: none;">
+
+                <h3>
+                    No food found
+                </h3>
+
+                <p>
+                    Try searching for something else.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Campus Canteen. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="auth.js"></script>
+    <script src="ordering.js"></script>
+
+</body>
+
+</html>

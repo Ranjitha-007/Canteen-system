@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Details - Campus Canteen</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order-details.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar order-details-navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                Campus Canteen
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+                <a href="complaints.html">
+                    Complaints
+                </a>
+
+                <a href="cart.html" class="cart-link">
+
+                    <svg width="20"
+                         height="20"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         stroke-linecap="round"
+                         stroke-linejoin="round">
+
+                        <circle cx="9" cy="20" r="1"></circle>
+                        <circle cx="19" cy="20" r="1"></circle>
+
+                        <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6">
+                        </path>
+
+                    </svg>
+
+                    Cart
+
+                    <span id="cartCount">0</span>
+
+                </a>
+
+            </div>
+
+            <a href="login.html" class="nav-login">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main -->
+    <main class="order-details-container">
+
+        <div id="orderDetails"></div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            &copy; 2026 Campus Canteen. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="auth.js"></script>
+    <script src="ordering.js"></script>
+
+</body>
+
+</html>
